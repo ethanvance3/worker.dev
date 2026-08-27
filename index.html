@@ -1,1 +1,424 @@
-hi
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan Vance Blog Xổ Số Thiên Phú</title>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --primary-hover: #b71c1c;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-color: #222222;
+            --text-muted: #666666;
+            --border-color: #eee;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header Banner */
+        .header-banner-link {
+            display: block;
+            width: 100%;
+            max-width: 1600px;
+            margin: 0 auto;
+            text-decoration: none;
+        }
+
+        .header-banner-link img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .header-title {
+            text-align: center;
+            padding: 16px 10px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .header-title h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        /* Container Main Body */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+
+        /* Block Giới thiệu */
+        .intro-card {
+            background: var(--card-bg);
+            padding: 24px 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            margin-bottom: 25px;
+        }
+
+        .intro-card p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        .intro-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .intro-card a {
+            color: var(--primary-color);
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .intro-card a:hover {
+            color: var(--primary-hover);
+        }
+
+        /* Block Bài viết nổi bật */
+        .section-title {
+            font-size: 1.35rem;
+            margin-bottom: 16px;
+            color: var(--text-color);
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+            font-weight: 700;
+        }
+
+        .posts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .post-card {
+            display: flex;
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .post-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .post-thumb-link {
+            display: block;
+            width: 220px;
+            min-width: 220px;
+        }
+
+        .post-thumb {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .post-content {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .post-title-link {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: color 0.2s ease;
+        }
+
+        .post-title-link:hover {
+            color: var(--primary-color);
+        }
+
+        .post-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .post-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .btn-more {
+            display: inline-block;
+            align-self: flex-start;
+            padding: 6px 16px;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .btn-more:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Footer & Social Links Styles */
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 24px 16px;
+            font-size: 0.9rem;
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #2a2a2a;
+            color: #cccccc;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .social-link svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .copyright-text {
+            color: #888888;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive Mobile Adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 12px;
+                margin: 15px auto;
+            }
+            .post-card {
+                flex-direction: column;
+            }
+            .post-thumb-link {
+                width: 100%;
+                height: 160px;
+            }
+            .intro-card {
+                padding: 18px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Banner & Title -->
+    <header>
+        <a href="https://ethanvance.tindd1009.workers.dev/" class="header-banner-link" title="Trang chủ Blog Ethan Vance">
+            <img src="https://sf-static.upanhlaylink.com/img/image_202608273e90e3a154519891cd881fc1d36bb17e.jpg" alt="Header Banner Blog Ethan Vance">
+        </a>
+        <div class="header-title">
+            <h1>Ethan Vance Blog Xổ Số Thiên Phú</h1>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        
+        <!-- Block Giới thiệu -->
+        <section class="intro-card">
+            <p>Chào cả nhà nha! Mình làm cái góc nhỏ này trên Workers chủ yếu để có chỗ thong thả giao lưu, trò chuyện cho xôm với những anh em nào cũng có cùng thói quen hóng kết quả xổ số mỗi chiều thứ Tư.</p>
+            <p>Từ trước tới nay, chiều thứ Tư nào cũng vậy, cứ tầm 17h15 là mình lại gạt hết công chuyện sang một bên, mở sẵn điện thoại ra chờ coi quay trực tiếp đài <a href="https://xosothienphu.vn/xsdna-xo-so-da-nang-sxdna.html" target="_blank" rel="noopener">xổ số Đà Nẵng hôm nay</a>. Thói quen này giữ bao nhiêu năm nay rồi, cái cảm giác ngồi chờ từng lồng quay xướng từng con số nó vừa hồi hộp vừa giải trí nhẹ nhàng sau những giờ làm việc căng thẳng. Mấy năm nay mình toàn vô trang xổ số Thiên Phú để coi thôi. Phải công nhận là bên này họ cập nhật số mượt cực kỳ, lồng quay vừa nhảy ra con nào là trên màn hình hiển thị ngay con đó, vừa nhanh vừa chuẩn đét từng giải một. Giao diện trực quan rõ ràng nên coi cực kỳ thích mắt, chẳng bao giờ lo bị giật lag hay chậm trễ chút nào.</p>
+            <p>Mà đâu phải chiều nào mình cũng rảnh rỗi để canh đúng giờ quay trực tiếp được đâu. Mấy hôm bận công chuyện ngoài đường chưa kịp về coi, thì tối muộn thong thả về nhà mình lại vô trang để dò lại <a href="https://xosothienphu.vn/xskh-xo-so-khanh-hoa-sxkh.html" target="_blank" rel="noopener">xổ số Khánh Hòa hôm nay trực tiếp</a>. Coi lại kiểu này vừa tiện lợi vừa yên tâm vì số liệu hiển thị rất rõ ràng, không sợ bị nhầm lẫn con số nào cả.</p>
+            <p>Anh em ghé qua trang cá nhân của mình nếu cũng có cùng sở thích hóng số mỗi chiều thứ Tư thì cứ thoải mái để lại vài dòng trò chuyện cho vui nhé!</p>
+        </section>
+
+        <!-- Block Bài viết nổi bật -->
+        <section>
+            <h2 class="section-title">Bài viết nổi bật</h2>
+            <div class="posts-list">
+                
+                <article class="post-card">
+                    <a href="https://wispy-glade-b3c2.tindd1009.workers.dev/" class="post-thumb-link">
+                        <img class="post-thumb" src="https://sf-static.upanhlaylink.com/img/image_202608276a3d64b565ddfc1a4bb049cc938f27c1.jpg" alt="XSMN thứ 3: Mẹo đọc bảng kết quả chuẩn xác cho 3 đài">
+                    </a>
+                    <div class="post-content">
+                        <div>
+                            <a href="https://wispy-glade-b3c2.tindd1009.workers.dev/" class="post-title-link">
+                                <h3 class="post-title">XSMN thứ 3: Mẹo đọc bảng kết quả chuẩn xác cho 3 đài</h3>
+                            </a>
+                            <p class="post-desc">Kỳ quay XSMN thứ 3 mở thưởng Bến Tre, Vũng Tàu, Bạc Liêu. Hướng dẫn cách đọc bảng kết quả khoa học, chính xác giúp bà con dò vé nhanh chóng, không lo nhầm lẫn.</p>
+                        </div>
+                        <a href="https://wispy-glade-b3c2.tindd1009.workers.dev/" class="btn-more">Xem thêm</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <a href="https://ket-qua-xo-so-mien-trung.tindd1009.workers.dev/" class="post-thumb-link">
+                        <img class="post-thumb" src="https://sf-static.upanhlaylink.com/img/image_202608276a3d64b565ddfc1a4bb049cc938f27c1.jpg" alt="Kết quả xổ số miền Trung thứ 4">
+                    </a>
+                    <div class="post-content">
+                        <div>
+                            <a href="https://ket-qua-xo-so-mien-trung.tindd1009.workers.dev/" class="post-title-link">
+                                <h3 class="post-title">Kết quả xổ số miền Trung: Mẹo bảo quản vé số ngày mưa bão</h3>
+                            </a>
+                            <p class="post-desc">Bảo quản vé số an toàn mùa mưa bão giúp bạn nắm trọn cơ hội khi dò ket qua xo so mien Trung. Cùng tìm hiểu mẹo giữ vé số phẳng phiu, nguyên vẹn.</p>
+                        </div>
+                        <a href="https://ket-qua-xo-so-mien-trung.tindd1009.workers.dev/" class="btn-more">Xem thêm</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <a href="https://green-unit-7796.tindd1009.workers.dev/" class="post-thumb-link">
+                        <img class="post-thumb" src="https://sf-static.upanhlaylink.com/img/image_202608276a3d64b565ddfc1a4bb049cc938f27c1.jpg" alt="SXMT hôm nay: Điều kiện và thủ tục nhận thưởng trúng xổ số">
+                    </a>
+                    <div class="post-content">
+                        <div>
+                            <a href="https://green-unit-7796.tindd1009.workers.dev/" class="post-title-link">
+                                <h3 class="post-title">SXMT hôm nay: Điều kiện và thủ tục nhận thưởng trúng xổ số</h3>
+                            </a>
+                            <p class="post-desc">Theo dõi SXMT hôm nay và tìm hiểu chi tiết điều kiện, thủ tục nhận thưởng an toàn, giúp bạn chuẩn bị đầy đủ giấy tờ cần thiết khi trúng giải.</p>
+                        </div>
+                        <a href="https://green-unit-7796.tindd1009.workers.dev/" class="btn-more">Xem thêm</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <a href="https://xsmb-thu-2-theo-doi-ket-qua-truc-tiep-tren-dien-thoai-de-nhin.tindd1009.workers.dev/" class="post-thumb-link">
+                        <img class="post-thumb" src="https://sf-static.upanhlaylink.com/img/image_202608276a3d64b565ddfc1a4bb049cc938f27c1.jpg" alt="XSMB thứ 2: Theo dõi kết quả trực tiếp trên điện thoại dễ nhìn">
+                    </a>
+                    <div class="post-content">
+                        <div>
+                            <a href="https://xsmb-thu-2-theo-doi-ket-qua-truc-tiep-tren-dien-thoai-de-nhin.tindd1009.workers.dev/" class="post-title-link">
+                                <h3 class="post-title">XSMB thứ 2: Theo dõi kết quả trực tiếp trên điện thoại dễ nhìn</h3>
+                            </a>
+                            <p class="post-desc">Bí quyết cập nhật nhanh kết quả xổ số miền Bắc đầu tuần giao diện rõ ràng, sắc nét.</p>
+                        </div>
+                        <a href="https://xsmb-thu-2-theo-doi-ket-qua-truc-tiep-tren-dien-thoai-de-nhin.tindd1009.workers.dev/" class="btn-more">Xem thêm</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <a href="https://xo-so-mien-nam-bua-thu-tu-huong-dan-tra-cuu-ket-qua-sieu-toc.tindd1009.workers.dev/" class="post-thumb-link">
+                        <img class="post-thumb" src="https://sf-static.upanhlaylink.com/img/image_202608276a3d64b565ddfc1a4bb049cc938f27c1.jpg" alt="Xổ số miền Nam bữa thứ Tư: Hướng dẫn tra cứu kết quả siêu tốc">
+                    </a>
+                    <div class="post-content">
+                        <div>
+                            <a href="https://xo-so-mien-nam-bua-thu-tu-huong-dan-tra-cuu-ket-qua-sieu-toc.tindd1009.workers.dev/" class="post-title-link">
+                                <h3 class="post-title">Xổ số miền Nam bữa thứ Tư: Hướng dẫn tra cứu kết quả siêu tốc</h3>
+                            </a>
+                            <p class="post-desc">Theo dõi thông tin chi tiết các đài quay XSMN thứ 4 cực kỳ đơn giản và nhanh gọn.</p>
+                        </div>
+                        <a href="https://xo-so-mien-nam-bua-thu-tu-huong-dan-tra-cuu-ket-qua-sieu-toc.tindd1009.workers.dev/" class="btn-more">Xem thêm</a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <a href="https://xo-so-dai-can-tho-cap-nhat-ket-qua-truc-tiep-de-theo-doi.tindd1009.workers.dev/" class="post-thumb-link">
+                        <img class="post-thumb" src="https://sf-static.upanhlaylink.com/img/image_202608276a3d64b565ddfc1a4bb049cc938f27c1.jpg" alt="Xổ số đài Cần Thơ: Cập nhật kết quả trực tiếp dễ theo dõi">
+                    </a>
+                    <div class="post-content">
+                        <div>
+                            <a href="https://xo-so-dai-can-tho-cap-nhat-ket-qua-truc-tiep-de-theo-doi.tindd1009.workers.dev/" class="post-title-link">
+                                <h3 class="post-title">Xổ số đài Cần Thơ: Cập nhật kết quả trực tiếp dễ theo dõi</h3>
+                            </a>
+                            <p class="post-desc">Dò kết quả XSCT chuẩn xác từng giải đấu, giao diện tối ưu cho mọi thiết bị di động.</p>
+                        </div>
+                        <a href="https://xo-so-dai-can-tho-cap-nhat-ket-qua-truc-tiep-de-theo-doi.tindd1009.workers.dev/" class="btn-more">Xem thêm</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer cố định Social Networks -->
+    <footer>
+        <div class="footer-socials">
+            <!-- Vercel -->
+            <a href="https://ethanvance.vercel.app/" target="_blank" rel="noopener" class="social-link" title="Vercel Blog">
+                <svg viewBox="0 0 512 512"><path d="M256 48L512 464H0L256 48z"/></svg>
+            </a>
+            <!-- Codeberg -->
+            <a href="https://ethanvance.codeberg.page/" target="_blank" rel="noopener" class="social-link" title="Codeberg">
+                <svg viewBox="0 0 24 24"><path d="M12 21.6c-4.8 0-8.8-3.6-9.5-8.3L12 3.8l9.5 9.5c-.7 4.7-4.7 8.3-9.5 8.3z"/></svg>
+            </a>
+            <!-- GitHub -->
+            <a href="https://ethanvance3.github.io/" target="_blank" rel="noopener" class="social-link" title="GitHub">
+                <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <!-- X (Twitter) -->
+            <a href="https://x.com/ethanvance17" target="_blank" rel="noopener" class="social-link" title="X (Twitter)">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <!-- Pinterest -->
+            <a href="https://www.pinterest.com/ethanvance2" target="_blank" rel="noopener" class="social-link" title="Pinterest">
+                <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+            </a>
+            <!-- Youtube -->
+            <a href="https://www.youtube.com/@xosothienphu" target="_blank" rel="noopener" class="social-link" title="YouTube">
+                <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <!-- Mastodon -->
+            <a href="https://mastodon.social/@ethanvance" target="_blank" rel="noopener" class="social-link" title="Mastodon">
+                <svg viewBox="0 0 24 24"><path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.3-5.004C15.334.028 12 .008 12 .008s-3.334.02-5.968.301C3.352.703 1.085 2.735.734 5.313c-.417 3.085-.453 6.643-.075 9.778.261 2.164 1.34 4.246 3.49 5.093 2.17.854 4.634.985 6.942.827 2.164-.148 4.195-.733 6.014-1.848-.124-.555-.262-1.116-.41-1.67-.09-.347-.406-.59-.762-.572-1.442.072-2.884.095-4.327.027-1.46-.07-2.923-.284-4.32-.733-.314-.1-.497-.432-.423-.755.074-.323.385-.536.708-.475 2.656.495 5.38.583 8.067.243 1.983-.25 3.916-.893 5.688-1.876 1.066-1.554 1.31-3.488 1.4-5.323.14-2.83.053-5.672-.257-8.498zM17.65 13.9h-2.51v-5.27c0-1.12-.47-1.68-1.41-1.68-.94 0-1.41.56-1.41 1.68v2.86H9.68v-2.86c0-1.12-.47-1.68-1.41-1.68-.94 0-1.41.56-1.41 1.68v5.27H4.35V8.53c0-1.12.3-2.01.9-2.67.6-.66 1.4-1 2.4-1 1.16 0 2.03.44 2.61 1.32.58-.88 1.45-1.32 2.61-1.32 1 0 1.8.34 2.4 1 .6.66.9 1.55.9 2.67V13.9z"/></svg>
+            </a>
+            <!-- Vimeo -->
+            <a href="https://vimeo.com/ethanvance" target="_blank" rel="noopener" class="social-link" title="Vimeo">
+                <svg viewBox="0 0 24 24"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L4.85 9.873C4.24 7.632 3.518 6.512 2.684 6.512c-.179 0-.803.376-1.87 1.129L0 6.604c1.176-1.033 2.333-2.071 3.47-3.11 1.564-1.353 2.73-2.07 3.501-2.148 1.826-.179 2.957 1.07 3.393 3.746.471 2.879.802 4.654.992 5.326.643 2.977 1.353 4.467 2.13 4.467.608 0 1.518-.962 2.73-2.887 1.212-1.926 1.854-3.39 1.928-4.39.144-1.638-.46-2.458-1.815-2.458-.643 0-1.302.147-1.979.442 1.321-4.312 3.84-6.381 7.558-6.208 2.747.126 4.07 1.802 3.969 5.03z"/></svg>
+            </a>
+            <!-- Framer (Website) -->
+            <a href="https://ethanvance.framer.website/" target="_blank" rel="noopener" class="social-link" title="Framer Portfolio">
+                <svg viewBox="0 0 24 24"><path d="M4 0h16v8h-8zM4 8h8l8 8H4zM4 16h8v8z"/></svg>
+            </a>
+        </div>
+        <div class="copyright-text">
+            © xosothienphu.vn - Blog Ethan Vance
+        </div>
+    </footer>
+
+</body>
+</html>
