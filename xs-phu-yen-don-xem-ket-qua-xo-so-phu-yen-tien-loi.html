@@ -18,10 +18,17 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; color: var(--text-color); background-color: var(--bg-color); -webkit-font-smoothing: antialiased; }
     
-    /* Header Styles */
-    header { background-color: #c0392b; color: #ffffff; padding: 15px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .header-container { max-width: 900px; margin: 0 auto; text-align: center; }
-    .site-title { font-size: 22px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; }
+    /* Header & Navigation Styles */
+    header { background-color: #c0392b; color: #ffffff; padding: 12px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .header-container { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .site-title { font-size: 20px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
+    .site-title a { color: #ffffff; text-decoration: none; }
+    .site-title a:hover { color: #f1c40f; }
+    
+    .main-nav { display: flex; align-items: center; gap: 15px; }
+    .nav-link { color: #ffffff; text-decoration: none; font-weight: 600; font-size: 15px; padding: 5px 12px; border-radius: 4px; background-color: rgba(255,255,255,0.15); transition: background-color 0.2s ease, color 0.2s ease; display: inline-flex; align-items: center; gap: 6px; }
+    .nav-link:hover { background-color: #ffffff; color: #c0392b; text-decoration: none; }
+    .nav-link svg { width: 16px; height: 16px; fill: currentColor; }
 
     /* Main Container */
     .container { max-width: 860px; margin: 25px auto; padding: 30px; background-color: #fff; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
@@ -73,6 +80,7 @@
     .copyright-text { color: #888888; font-size: 0.85rem; }
 
     @media (max-width: 768px) {
+      .header-container { justify-content: center; text-align: center; }
       .related-card { flex: 1 1 100%; }
       .container { padding: 20px 15px; margin: 15px auto; }
     }
@@ -80,10 +88,18 @@
 </head>
 <body>
 
-  <!-- Header Component -->
+  <!-- Header Component có Menu Trang chủ -->
   <header>
     <div class="header-container">
-      <div class="site-title">Blog Ethan Vance @Xổ Số Thiên Phú</div>
+      <div class="site-title">
+        <a href="https://ethanvance.tindd1009.workers.dev/">Blog Ethan Vance</a>
+      </div>
+      <nav class="main-nav">
+        <a href="https://ethanvance.tindd1009.workers.dev/" class="nav-link" title="Trang chủ">
+          <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          Trang chủ
+        </a>
+      </nav>
     </div>
   </header>
 
