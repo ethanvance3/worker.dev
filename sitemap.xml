@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ethanvance.tindd1009.workers.dev/https://wispy-glade-b3c2.tindd1009.workers.dev/https://ket-qua-xo-so-mien-trung.tindd1009.workers.dev/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://ethanvance.tindd1009.workers.dev/</loc>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://wispy-glade-b3c2.tindd1009.workers.dev/</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://green-unit-7796.tindd1009.workers.dev/https://xsmb-thu-2-theo-doi-ket-qua-truc-tiep-tren-dien-thoai-de-nhin.tindd1009.workers.dev/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>daily</changefreq>
+    <loc>https://ket-qua-xo-so-mien-trung.tindd1009.workers.dev/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://green-unit-7796.tindd1009.workers.dev/</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://xsmb-thu-2-theo-doi-ket-qua-truc-tiep-tren-dien-thoai-de-nhin.tindd1009.workers.dev/</loc>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://xo-so-mien-nam-bua-thu-tu-huong-dan-tra-cuu-ket-qua-sieu-toc.tindd1009.workers.dev/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://xo-so-dai-can-tho-cap-nhat-ket-qua-truc-tiep-de-theo-doi.tindd1009.workers.dev/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://ethanvance.tindd1009.workers.dev/xs-phu-yen-don-xem-ket-qua-xo-so-phu-yen-tien-loi</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>daily</changefreq>
     <priority>0.80</priority>
   </url>
 </urlset>
