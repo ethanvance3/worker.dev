@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trực tiếp xổ số miền Nam: Kênh nào phù hợp nhất với bạn?</title>
+  <meta name="description" content="Xem truc tiep xo so mien Nam qua tivi, website hay app, cẩm nang tra cứu XSMN nhanh chóng, cập nhật khung giờ vàng, cơ cấu giải và cách dò vé chuẩn.">
+  <style>
+    :root {
+      --primary-color: #c0392b;
+      --primary-hover: #e74c3c;
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-color: #2c3e50;
+      --text-muted: #666666;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; color: var(--text-color); background-color: var(--bg-color); -webkit-font-smoothing: antialiased; }
+    
+    /* Header & Navigation Styles */
+    header { background-color: #c0392b; color: #ffffff; padding: 12px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .header-container { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .site-title { font-size: 20px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; }
+    .site-title a { color: #ffffff; text-decoration: none; }
+    .site-title a:hover { color: #f1c40f; }
+    
+    .main-nav { display: flex; align-items: center; gap: 15px; }
+    .nav-link { color: #ffffff; text-decoration: none; font-weight: 600; font-size: 15px; padding: 5px 12px; border-radius: 4px; background-color: rgba(255,255,255,0.15); transition: background-color 0.2s ease, color 0.2s ease; display: inline-flex; align-items: center; gap: 6px; }
+    .nav-link:hover { background-color: #ffffff; color: #c0392b; text-decoration: none; }
+    .nav-link svg { width: 16px; height: 16px; fill: currentColor; }
+
+    /* Main Container */
+    .container { max-width: 860px; margin: 25px auto; padding: 30px; background-color: #fff; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    
+    /* Title & Meta */
+    h1 { color: #c0392b; font-size: 24px; line-height: 1.35; margin-bottom: 12px; font-weight: bold; border-bottom: 2px solid #c0392b; padding-bottom: 8px; }
+    
+    .article-meta { font-size: 14px; color: #7f8c8d; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+    .article-meta span { margin-right: 20px; display: inline-block; }
+    .article-meta strong { color: #34495e; }
+
+    /* Content Typography */
+    h2 { color: #16a085; font-size: 20px; border-bottom: 1px solid #16a085; padding-bottom: 5px; margin-top: 25px; margin-bottom: 12px; font-weight: bold; }
+    h3 { color: #2980b9; font-size: 17px; font-weight: bold; margin-top: 18px; margin-bottom: 10px; }
+    p { margin-bottom: 15px; text-align: justify; }
+    .sapo { background-color: #f8f9fa; border-left: 4px solid #c0392b; padding: 12px 15px; font-size: 15px; font-weight: 500; color: #444444; margin-bottom: 20px; border-radius: 0 4px 4px 0; }
+    blockquote { background-color: #f0f7ff; border-left: 4px solid #2980b9; margin: 20px 0; padding: 12px 18px; font-style: italic; color: #2c3e50; }
+    hr { border: 0; height: 1px; background-color: #d1d8e0; margin: 25px 0; }
+    figure { margin: 20px 0; text-align: center; }
+    img { max-width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); display: block; margin: 0 auto; }
+    figcaption { font-size: 13.5px; color: #666666; font-style: italic; margin-top: 8px; text-align: center; }
+    a { color: #2980b9; text-decoration: underline; font-weight: bold; }
+    a:hover { color: #c0392b; }
+    
+    /* Related Link Box */
+    .see-more-box { background-color: #ebf5fb; border: 1px dashed #2980b9; padding: 12px 15px; border-radius: 6px; margin: 25px 0; }
+    .see-more-box span { font-weight: bold; color: #c0392b; text-transform: uppercase; font-size: 13px; }
+
+    /* Related Articles Block with Thumbnails */
+    .related-articles-block { background-color: #ffffff; border-top: 2px solid #c0392b; padding-top: 25px; margin-top: 40px; }
+    .related-articles-block h3.block-title { color: #c0392b; font-size: 20px; margin-top: 0; margin-bottom: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    .related-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+    .related-card { flex: 1 1 calc(33.333% - 14px); min-width: 230px; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; }
+    .related-card:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
+    .related-thumb { width: 100%; height: 140px; object-fit: cover; margin: 0; border-radius: 0; box-shadow: none; }
+    .related-content { padding: 15px; display: flex; flex-direction: column; flex-grow: 1; }
+    .related-card-title { font-size: 15px; font-weight: 700; line-height: 1.4; margin: 0 0 8px 0; color: #2c3e50; }
+    .related-card-title a { color: #2c3e50; text-decoration: none; }
+    .related-card-title a:hover { color: #c0392b; }
+    .related-excerpt { font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 0; text-align: left; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+    /* Footer & Social Links Styles */
+    footer { background-color: #1a1a1a; color: #ffffff; text-align: center; padding: 24px 16px; font-size: 0.9rem; margin-top: 40px; }
+    .footer-socials { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+    .social-link { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background-color: #2a2a2a; color: #cccccc; text-decoration: none; transition: all 0.25s ease; }
+    .social-link svg { width: 18px; height: 18px; fill: currentColor; }
+    .social-link:hover { background-color: #c0392b; color: #ffffff; transform: translateY(-2px); }
+    .copyright-text { color: #888888; font-size: 0.85rem; }
+
+    @media (max-width: 768px) {
+      .header-container { justify-content: center; text-align: center; }
+      .related-card { flex: 1 1 100%; }
+      .container { padding: 20px 15px; margin: 15px auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Component có Menu Trang chủ -->
+  <header>
+    <div class="header-container">
+      <div class="site-title">
+        <a href="https://ethanvance.tindd1009.workers.dev/">Blog Ethan Vance</a>
+      </div>
+      <nav class="main-nav">
+        <a href="https://ethanvance.tindd1009.workers.dev/" class="nav-link" title="Trang chủ">
+          <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          Trang chủ
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Trực tiếp xổ số miền Nam: Kênh nào phù hợp nhất với bạn?</h1>
+
+    <!-- Author & View Count Meta -->
+    <div class="article-meta">
+      <span>Tác giả: <strong>Ethan Vance</strong></span>
+      <span>Lượt xem: <strong>19,450</strong></span>
+      <span>Ngày cập nhật: <strong>21/10/2026</strong></span>
+    </div>
+
+    <!-- Sapo -->
+    <div class="sapo">
+      Xem truc tiep xo so mien Nam qua tivi, website hay app, cẩm nang tra cứu XSMN nhanh chóng, cập nhật khung giờ vàng, cơ cấu giải và cách dò vé chuẩn.
+    </div>
+
+    <!-- Đoạn mở đầu -->
+    <p>Mỗi buổi chiều khi kim đồng hồ điểm qua con số 4, không khí tại các khu dân cư hay những quán nước ven đường ở các tỉnh thành phía Nam lại trở nên sôi động lạ thường khi đón xem <a href="https://xosothienphu.vn/xsmn-xo-so-mien-nam-sxmn.html" target="_blank" rel="noopener" title="truc tiep xo so mien Nam">truc tiep xo so mien Nam</a>.</p>
+
+    <p>Đây là thời điểm mà bà con, cô bác tạm gác lại những công việc thường nhật để cùng nhau đón chờ kết quả mở thưởng. Việc lựa chọn phương thức nào để theo dõi trực tiếp buổi quay số không chỉ phụ thuộc vào sở thích mà còn vào điều kiện công việc của mỗi người. Bài viết này sẽ giúp quý vị tìm ra cách xem kết quả phù hợp nhất để buổi giải trí thêm phần trọn vẹn.</p>
+
+    <h2>Khung giờ vàng quay thưởng trực tiếp xổ số miền nam</h2>
+
+    <p>Để không bỏ lỡ những khoảnh khắc hồi hộp khi từng quả cầu bắt đầu xoay, bà con cần nhớ rõ khung giờ quay thưởng của các đài khu vực phía Nam.</p>
+
+    <blockquote>
+      "Khung giờ quay thưởng trực tiếp XSMN diễn ra cố định từ 16h10 đến 16h45 hàng ngày tại trường quay các tỉnh."
+    </blockquote>
+
+    <p>Theo quy định chung, chương trình trực tiếp xổ số miền nam sẽ bắt đầu từ 16 giờ 10 phút và kết thúc vào khoảng 16 giờ 45 phút hàng ngày. Trong khoảng 35 phút này, các giải thưởng từ giải Tám đến giải Đặc biệt sẽ lần lượt được công bố bao gồm các đài mở thưởng đầu tuần như phiên <a href="https://xosothienphu.vn/xsmn-thu-2.html" target="_blank" rel="noopener" title="XSMN thứ 2" style="text-decoration: none;">XSMN thứ 2</a>. Việc nắm chắc giờ giấc giúp quý vị chủ động sắp xếp thời gian để theo dõi sát sao từng con số mà mình đang cầm trên tay.</p>
+
+    <h2>Xem trực tiếp qua tivi truyền thống dành cho gia đình</h2>
+
+    <p>Với những cô bác đã về hưu hoặc những người có thói quen quây quần bên gia đình mỗi buổi chiều, việc xem kết quả <strong>truc tiep xo so mien Nam</strong> qua tivi vẫn là lựa chọn số một.</p>
+
+    <p>Ưu điểm lớn nhất của hình thức này là màn hình lớn, âm thanh rõ ràng và không khí vô cùng chân thực. Bà con có thể vừa dùng cơm chiều vừa nghe tiếng loa phát thanh công bố từng giải thưởng từ các đài truyền hình địa phương. Tuy nhiên, cách này có một hạn chế là quý vị phải ngồi trước màn hình tivi và không thể mang đi xa khi có việc bận ra ngoài đường.</p>
+
+    <figure>
+      <img src="https://sf-static.upanhlaylink.com/img/image_202610217057ddd48d90c6f6966ab2155f539cb1.jpg" alt="Tra cứu truc tiep xo so mien Nam mượt mà trên di động">
+      <figcaption>Nguồn: Ảnh sưu tầm internet</figcaption>
+    </figure>
+
+    <h2>Tra cứu nhanh qua website Xổ Số Thiên Phú trên điện thoại</h2>
+
+    <p>Trong thời đại ngày nay, khi ai cũng có một chiếc điện thoại thông minh trên tay, việc tra cứu qua mạng internet đã trở nên phổ biến hơn bao giờ hết. Một địa chỉ uy tín mà nhiều anh chị hay truyền tai nhau chính là trang Xổ Số Thiên Phú.</p>
+
+    <p>Khi truy cập vào đây, kết quả <strong>truc tiep xo so mien Nam</strong> được cập nhật từng giây theo đúng tiến độ của trường quay. Ưu điểm của website này là tốc độ tải rất nhanh, hình ảnh rõ nét và hoàn toàn miễn phí. Quý vị dù đang đi làm, đang ngồi quán cà phê hay đang đi chợ cũng có thể mở điện thoại lên để xem trực tiếp các đài hôm nay một cách dễ dàng. Xổ Số Thiên Phú giúp bà con tiết kiệm thời gian mà vẫn đảm bảo nắm bắt thông tin nhanh chóng nhất.</p>
+
+    <h2>Cập nhật kết quả qua các ứng dụng di động tiện lợi</h2>
+
+    <p>Bên cạnh việc vào trang web, nhiều bạn trẻ hiện nay lại thích cài đặt các ứng dụng xem xổ số trực tiếp. Các ứng dụng này có tính năng thông báo rất tiện lợi. Cứ đến đúng 16 giờ 10 phút, điện thoại sẽ báo rung để nhắc bà con vào xem trực tiếp.</p>
+
+    <p>Tuy nhiên, khi dùng ứng dụng, quý vị cần lưu ý chọn những ứng dụng chính thống để tránh các quảng cáo không cần thiết gây phiền phức trong quá trình theo dõi. Hình thức này cực kỳ phù hợp với những người bận rộn và hay quên khung giờ mở thưởng hàng ngày.</p>
+
+    <hr>
+
+    <h2>Cơ cấu giải thưởng hấp dẫn của xổ số miền nam</h2>
+
+    <p>Để bà con hiểu rõ hơn về giá trị những tấm vé mình đang cầm khi đón xem <strong>truc tiep xo so mien Nam</strong>, chúng tôi xin liệt kê chi tiết các hạng mục giải thưởng của khu vực miền Nam cho loại vé 10.000 đồng hiện nay:</p>
+
+    <p><strong>01 Giải Đặc biệt:</strong> 2.000.000.000 VNĐ</p>
+    <p><strong>10 Giải Nhất:</strong> 30.000.000 VNĐ / giải</p>
+    <p><strong>10 Giải Nhì:</strong> 15.000.000 VNĐ / giải</p>
+    <p><strong>20 Giải Ba:</strong> 10.000.000 VNĐ / giải</p>
+    <p><strong>70 Giải Tư:</strong> 3.000.000 VNĐ / giải</p>
+    <p><strong>100 Giải Năm:</strong> 1.000.000 VNĐ / giải</p>
+    <p><strong>300 Giải Sáu:</strong> 400.000 VNĐ / giải</p>
+    <p><strong>1.000 Giải Bảy:</strong> 200.000 VNĐ / giải</p>
+    <p><strong>10.000 Giải Tám:</strong> 100.000 VNĐ / giải</p>
+    <p><strong>09 Giải Phụ Đặc biệt:</strong> 50.000.000 VNĐ / giải</p>
+    <p><strong>45 Giải Khuyến khích:</strong> 6.000.000 VNĐ / giải</p>
+
+    <figure>
+      <img src="https://sf-static.upanhlaylink.com/img/image_202610213fcec7e991696d9cd71641b2382b0954.jpg" alt="Dò truc tiep xo so mien Nam chuẩn xác tại Xổ Số Thiên Phú">
+      <figcaption>Nguồn: Ảnh do Xổ Số Thiên Phú cung cấp</figcaption>
+    </figure>
+
+    <h2>Hướng dẫn các bước dò vé số miền nam cho bà con</h2>
+
+    <p>Để quá trình dò số diễn ra suôn sẻ và tránh nhầm lẫn đáng tiếc khi xem lại bảng <strong>truc tiep xo so mien Nam</strong>, quý vị nên thực hiện theo các bước cụ thể sau đây:</p>
+
+    <p><strong>Bước 1:</strong> Quan sát kỹ tên đài mở thưởng và ngày in trên tờ vé số để đảm bảo đúng với kết quả đang xem.</p>
+    <p><strong>Bước 2:</strong> Tiến hành so sánh hai số cuối của tờ vé với giải Tám trước tiên vì đây là giải dễ trúng nhất.</p>
+    <p><strong>Bước 3:</strong> Nếu trùng khớp hai số cuối thì tiếp tục dò lên các giải cao hơn như giải Bảy, giải Sáu và các giải khác.</p>
+    <p><strong>Bước 4:</strong> Kiểm tra kỹ từng chữ số đối với giải Đặc biệt để xem mình có trúng giải chính hoặc giải phụ hay không.</p>
+    <p><strong>Bước 5:</strong> Sau khi thấy trùng khớp, bà con nên kiểm tra lại một lần nữa trên trang Xổ Số Thiên Phú để chắc chắn hoàn toàn trước khi đi nhận thưởng.</p>
+
+    <h2>Địa chỉ các công ty xổ số kiến thiết khu vực miền nam</h2>
+
+    <p>Nếu có tin vui trúng giải sau khi theo dõi kết quả <strong>truc tiep xo so mien Nam</strong>, quý vị có thể đến trực tiếp trụ sở các công ty để làm thủ tục. Ví dụ tại TP. Hồ Chí Minh, bà con đến địa chỉ số 77 đường Trần Nhân Tôn, Phường An Đông. Tại Cần Thơ, địa chỉ công ty nằm ở số 29 đường Cách Mạng Tháng Tám, phường Ninh Kiều. Mỗi tỉnh thành đều có trụ sở riêng để phục vụ bà con một cách chu đáo và minh bạch nhất. Chúc quý vị có những giây phút thư giãn thoải mái và gặp nhiều niềm vui khi tham gia hình thức giải trí này.</p>
+
+    <p>Việc tham gia mua vé số kiến thiết không chỉ là một thú vui giải trí lành mạnh trong lúc rảnh rỗi mà còn là hành động thiết thực của mỗi người dân. Toàn bộ nguồn thu từ hoạt động này đều được đóng góp vào ngân sách nhà nước để đầu tư xây dựng các công trình công cộng như trường học, bệnh viện và các con đường nông thôn, giúp đời sống của nhân dân ngày càng phát triển hơn. Mong rằng mỗi tờ vé số trên tay bà con sẽ mang lại niềm vui nhỏ và đóng góp thật nhiều cho xã hội. Hãy luôn ghi nhớ rằng: <strong>Xổ số kiến thiết - Ích nước lợi nhà</strong>.</p>
+
+    <!-- Khối Xem thêm -->
+    <div class="see-more-box">
+      <span>Xem thêm:</span> 
+      <a href="https://vimeo.com/1213180312" target="_blank" rel="noopener">Tra Cứu Xổ Số Miền Nam Hôm Nay Trực Tiếp Nhanh Chuẩn</a>
+    </div>
+
+    <!-- Khối Bài viết liên quan mới -->
+    <div class="related-articles-block">
+      <h3 class="block-title">Bài viết liên quan</h3>
+      <div class="related-grid">
+        
+        <div class="related-card">
+          <a href="https://ethanvance.tindd1009.workers.dev/xs-phu-yen-don-xem-ket-qua-xo-so-phu-yen-tien-loi">
+            <img class="related-thumb" src="https://sf-static.upanhlaylink.com/img/image_202607311483cba906f5935083fd3cbd6b6514a8.jpg" alt="XS Phú Yên: Đón xem kết quả Xổ số Phú Yên tiện lợi">
+          </a>
+          <div class="related-content">
+            <h4 class="related-card-title"><a href="https://ethanvance.tindd1009.workers.dev/xs-phu-yen-don-xem-ket-qua-xo-so-phu-yen-tien-loi">XS Phú Yên: Đón xem kết quả Xổ số Phú Yên tiện lợi</a></h4>
+            <p class="related-excerpt">Tra cứu XS Phú Yên trực tiếp siêu tốc, cập nhật lịch quay Thứ Hai hàng tuần, cơ cấu giải thưởng chi tiết và địa chỉ nhận thưởng công ty XSKT chính xác nhất.</p>
+          </div>
+        </div>
+
+        <div class="related-card">
+          <a href="https://xo-so-dai-can-tho-cap-nhat-ket-qua-truc-tiep-de-theo-doi.tindd1009.workers.dev/">
+            <img class="related-thumb" src="https://sf-static.upanhlaylink.com/img/image_202607311483cba906f5935083fd3cbd6b6514a8.jpg" alt="Xổ số đài Cần Thơ: Cập nhật kết quả trực tiếp dễ theo dõi">
+          </a>
+          <div class="related-content">
+            <h4 class="related-card-title"><a href="https://xo-so-dai-can-tho-cap-nhat-ket-qua-truc-tiep-de-theo-doi.tindd1009.workers.dev/">Xổ số đài Cần Thơ: Cập nhật kết quả trực tiếp dễ theo dõi</a></h4>
+            <p class="related-excerpt">Hướng dẫn tra cứu kết quả xổ số đài Cần Thơ trực tiếp nhanh chóng, cập nhật lịch quay thưởng và cơ cấu giải thưởng chính xác nhất.</p>
+          </div>
+        </div>
+
+        <div class="related-card">
+          <a href="https://xo-so-mien-nam-bua-thu-tu-huong-dan-tra-cuu-ket-qua-sieu-toc.tindd1009.workers.dev/">
+            <img class="related-thumb" src="https://sf-static.upanhlaylink.com/img/image_202607311483cba906f5935083fd3cbd6b6514a8.jpg" alt="Xổ số miền Nam bữa thứ tư: Hướng dẫn tra cứu kết quả siêu tốc">
+          </a>
+          <div class="related-content">
+            <h4 class="related-card-title"><a href="https://xo-so-mien-nam-bua-thu-tu-huong-dan-tra-cuu-ket-qua-sieu-toc.tindd1009.workers.dev/">Xổ số miền Nam bữa thứ tư: Hướng dẫn tra cứu kết quả siêu tốc</a></h4>
+            <p class="related-excerpt">Hướng dẫn tra cứu kết quả xổ số miền Nam bữa thứ tư siêu tốc trên điện thoại di động, chi tiết lịch mở thưởng 3 đài Đồng Nai, Cần Thơ, Sóc Trăng chuẩn xác.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer chứa dàn Social Networks -->
+  <footer>
+    <div class="footer-socials">
+      <!-- Vercel -->
+      <a href="https://ethanvance.vercel.app/" target="_blank" rel="noopener" class="social-link" title="Vercel Blog">
+        <svg viewBox="0 0 512 512"><path d="M256 48L512 464H0L256 48z"/></svg>
+      </a>
+      <!-- Codeberg -->
+      <a href="https://ethanvance.codeberg.page/" target="_blank" rel="noopener" class="social-link" title="Codeberg">
+        <svg viewBox="0 0 24 24"><path d="M12 21.6c-4.8 0-8.8-3.6-9.5-8.3L12 3.8l9.5 9.5c-.7 4.7-4.7 8.3-9.5 8.3z"/></svg>
+      </a>
+      <!-- GitHub -->
+      <a href="https://ethanvance3.github.io/" target="_blank" rel="noopener" class="social-link" title="GitHub">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      </a>
+      <!-- Cloudflare Workers -->
+      <a href="https://ethanvance.tindd1009.workers.dev/" target="_blank" rel="noopener" class="social-link" title="Cloudflare Workers">
+        <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/></svg>
+      </a>
+      <!-- X (Twitter) -->
+      <a href="https://x.com/ethanvance17" target="_blank" rel="noopener" class="social-link" title="X (Twitter)">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <!-- Pinterest -->
+      <a href="https://www.pinterest.com/ethanvance2" target="_blank" rel="noopener" class="social-link" title="Pinterest">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+      </a>
+      <!-- Youtube -->
+      <a href="https://www.youtube.com/@xosothienphu" target="_blank" rel="noopener" class="social-link" title="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      </a>
+      <!-- Mastodon -->
+      <a href="https://mastodon.social/@ethanvance" target="_blank" rel="noopener" class="social-link" title="Mastodon">
+        <svg viewBox="0 0 24 24"><path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.3-5.004C15.334.028 12 .008 12 .008s-3.334.02-5.968.301C3.352.703 1.085 2.735.734 5.313c-.417 3.085-.453 6.643-.075 9.778.261 2.164 1.34 4.246 3.49 5.093 2.17.854 4.634.985 6.942.827 2.164-.148 4.195-.733 6.014-1.848-.124-.555-.262-1.116-.41-1.67-.09-.347-.406-.59-.762-.572-1.442.072-2.884.095-4.327.027-1.46-.07-2.923-.284-4.32-.733-.314-.1-.497-.432-.423-.755.074-.323.385-.536.708-.475 2.656.495 5.38.583 8.067.243 1.983-.25 3.916-.893 5.688-1.876 1.066-1.554 1.31-3.488 1.4-5.323.14-2.83.053-5.672-.257-8.498zM17.65 13.9h-2.51v-5.27c0-1.12-.47-1.68-1.41-1.68-.94 0-1.41.56-1.41 1.68v2.86H9.68v-2.86c0-1.12-.47-1.68-1.41-1.68-.94 0-1.41.56-1.41 1.68v5.27H4.35V8.53c0-1.12.3-2.01.9-2.67.6-.66 1.4-1 2.4-1 1.16 0 2.03.44 2.61 1.32.58-.88 1.45-1.32 2.61-1.32 1 0 1.8.34 2.4 1 .6.66.9 1.55.9 2.67V13.9z"/></svg>
+      </a>
+      <!-- Vimeo -->
+      <a href="https://vimeo.com/ethanvance" target="_blank" rel="noopener" class="social-link" title="Vimeo">
+        <svg viewBox="0 0 24 24"><path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L4.85 9.873C4.24 7.632 3.518 6.512 2.684 6.512c-.179 0-.803.376-1.87 1.129L0 6.604c1.176-1.033 2.333-2.071 3.47-3.11 1.564-1.353 2.73-2.07 3.501-2.148 1.826-.179 2.957 1.07 3.393 3.746.471 2.879.802 4.654.992 5.326.643 2.977 1.353 4.467 2.13 4.467.608 0 1.518-.962 2.73-2.887 1.212-1.926 1.854-3.39 1.928-4.39.144-1.638-.46-2.458-1.815-2.458-.643 0-1.302.147-1.979.442 1.321-4.312 3.84-6.381 7.558-6.208 2.747.126 4.07 1.802 3.969 5.03z"/></svg>
+      </a>
+      <!-- Framer (Website) -->
+      <a href="https://ethanvance.framer.website/" target="_blank" rel="noopener" class="social-link" title="Framer Portfolio">
+        <svg viewBox="0 0 24 24"><path d="M4 0h16v8h-8zM4 8h8l8 8H4zM4 16h8v8z"/></svg>
+      </a>
+    </div>
+    <div class="copyright-text">
+      © xosothienphu.vn - Blog Ethan Vance
+    </div>
+  </footer>
+
+</body>
+</html>
